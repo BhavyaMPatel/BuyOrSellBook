@@ -34,5 +34,5 @@ model Folder Contains Database Model
 ```
 
 ```
-Happy Codeing
+Happy Coding
 ```
