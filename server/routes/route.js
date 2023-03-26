@@ -22,25 +22,12 @@ routes.get('/',(req,res)=>{
     SellBook.find({},function(err, books) {
         if(err) throw err;
         res.json(books);
-        // blogs_array=blog;
-        // console.log(blogs_array);   
-        
-    })
-    // console.log(blogs_array);
-    // res.send(blogs_array);
-    
 })
 
 routes.post('/user',(req,res)=>{
     let blogs_array=[];
     console.log(req.body)
     const {id, mailid,password}=req.body;   
-    // User.find({},function(err, blog) {
-    //     blogs_array=blog;
-    //     console.log(blogs_array);   
-    // })
-    // console.log(blogs_array);   
-    // res.sendStatus(202); 
     res.status(202).json({id:id});
 })
 
@@ -80,7 +67,6 @@ routes.post('/sell',upload.single('image'),(req,res)=>{
         }
     })
    
-    // console.log(req.body);
 })
 
 routes.get('/cart',(req,res)=>{
